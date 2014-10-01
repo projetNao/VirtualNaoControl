@@ -1,20 +1,34 @@
 package com.nao.virtualnaocontrol;
 
+import com.nao.opengl.MyGLSurfaceView;
+
 import android.app.Activity;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
 
-    @Override
+   /* @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+	*/
+	
+	 private GLSurfaceView mGLView;
 
+	    @Override
+	    public void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
 
+	        // Create a GLSurfaceView instance and set it
+	        // as the ContentView for this Activity.
+	        mGLView = new MyGLSurfaceView(this);
+	        setContentView(mGLView);
+	    }
+
+	    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -32,5 +46,5 @@ public class MainActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    } */
 }
