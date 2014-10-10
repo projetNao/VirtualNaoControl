@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 			case LoaderCallbackInterface.SUCCESS:
 				Log.i(TAG, "OpenCV loaded successfully");
 				// Load native library after(!) OpenCV initialization
-				// System.loadLibrary("detection_based_tracker");
+				// System.loadLibrary("detection_based_tracker") ;
 				FeatureDetector detector = FeatureDetector
 						.create(FeatureDetector.FAST);
 
